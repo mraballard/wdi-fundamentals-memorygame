@@ -1,3 +1,84 @@
-/* This is a multi-line
+.board {
+	height: 50%;
+	width: 50%;
+	display: inline-block;
+	float: left;
+	margin: 8%;
+}
+.card {
+	height: 200px;
+	width: 150px;
+	border: 1px solid black;
+	background-color: yellow;
+	border-radius: 10px;
+	/* this was not inclueded in the assignemnt but
+	was the only way to get the cards 2x2 */
+	display: inline-block;
+	margin: 8%;
+}
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+content: " ";
+clear: both;
+height: 0;
+font-size: 0;
+}
+
+body {
+	font-family: helvetica, tahoma, sans-serif;
+	text-align: center;
+}
+
+header {
+
+}
+nav {
+	background-color: #808080;
+}
+nav a {
+  text-decoration: none;
+  background-color: #ffbf00;
+  color: white;
+  padding: 35px;
+  display: block;
+  float: left;
+}
+
+a:hover {
+	background-color: #ee5f3c;
+}
+
+h1 {
+	display: inline-block;
+	font-size: 3em;
+	color: rgb(2,132,130);
+}
+
+h2	{
+	font-size: 1.8em;
+	display: block;
+	color: #ffd700;
+}
+
+h3	{
+	font-size: 1.2em;
+	display: block;
+	color: #bbccee;
+}
+
+p {
+	
+}
+.myname {
+	color: #ff0000;
+}
+
+footer {
+	clear: both;
+	
+	background-color: #808080;
+}/* This is a multi-line
 comment. Add your CSS code
 from Unit 1 - 5 below  */
