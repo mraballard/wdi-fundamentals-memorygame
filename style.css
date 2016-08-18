@@ -1,8 +1,9 @@
 .board {
 	height: 50%;
-	width: 100%;
+	width: 50%;
 	display: inline-block;
-	float: none;
+	float: left;
+	margin: 8%;
 }
 .card {
 	height: 200px;
@@ -13,7 +14,7 @@
 	/* this was not inclueded in the assignemnt but
 	was the only way to get the cards 2x2 */
 	display: inline-block;
-	margin: 1em;
+	margin: 8%;
 }
 
 .clearfix:after {
@@ -26,10 +27,8 @@ font-size: 0;
 }
 
 body {
-	width: 500px;
 	font-family: helvetica, tahoma, sans-serif;
 	text-align: center;
-	margin: 10px	auto;
 }
 
 header {
@@ -37,13 +36,12 @@ header {
 }
 nav {
 	background-color: #808080;
-	margin-bottom: 15px;
 }
 nav a {
   text-decoration: none;
   background-color: #ffbf00;
   color: white;
-  padding: 25px;
+  padding: 35px;
   display: block;
   float: left;
 }
@@ -56,7 +54,6 @@ h1 {
 	display: inline-block;
 	font-size: 3em;
 	color: rgb(2,132,130);
-	margin: 20px;
 }
 
 h2	{
@@ -69,11 +66,10 @@ h3	{
 	font-size: 1.2em;
 	display: block;
 	color: #bbccee;
-	margin: 10px 0 10px 0;
 }
 
 p {
-	text-align: justify;
+	
 }
 .myname {
 	color: #ff0000;
@@ -81,8 +77,6 @@ p {
 
 footer {
 	clear: both;
-
+	
 	background-color: #808080;
-}/* This is a multi-line
-comment. Add your CSS code
-from Unit 1 - 5 below  */
+}
