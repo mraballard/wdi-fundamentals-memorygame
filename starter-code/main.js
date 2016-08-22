@@ -21,11 +21,15 @@ var createBoard = function()  {
 }
 
 var isMatch = function(cardsInPlay) {
+  var resetCards = document.querySelectorAll('.card');
   if (cardsInPlay[0] === cardsInPlay[1]) {
     alert('You have a match!');
   }
   else {
     alert('Sorry, not a match!')
+  }
+  for (var i = 0; i < resetCards.length; i++) {
+    resetCards[i].innerHTML = '';
   }
 }
 
@@ -37,7 +41,6 @@ var isTwoCards = function() {
   else {
     this.innerHTML = '<img src="queen-clubs.png" alt="Queen of Clubs" />';
   }
-console.log(cardsInPlay);
   if (cardsInPlay.length === 2) { //If user has clicked two cards, run test.
     isMatch(cardsInPlay);
     cardsInPlay = [];
