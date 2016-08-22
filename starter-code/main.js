@@ -31,6 +31,12 @@ var isMatch = function(cardsInPlay) {
 
 var isTwoCards = function() {
   cardsInPlay.push(this.getAttribute('data-card'));
+  if (this.getAttribute('data-card') === 'king') {
+    this.innerHTML = '<img src="king-clubs.png" alt="King of Clubs" />';
+  }
+  else {
+    this.innerHTML = '<img src="queen-clubs.png" alt="Queen of Clubs" />';
+  }
 console.log(cardsInPlay);
   if (cardsInPlay.length === 2) { //If user has clicked two cards, run test.
     isMatch(cardsInPlay);
