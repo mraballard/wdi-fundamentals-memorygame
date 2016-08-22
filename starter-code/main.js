@@ -1,38 +1,41 @@
 console.log("JS file is connected to HTML! Woo")
 
-var cardOne = "queen";
-var cardTwo = "queen";
-var cardThree = "king";
-var cardFour = "king";
+var cards = [];
+cards[0] = 'queen';
+cards[1] = 'queen';
+cards[2] = 'king';
+cards[3] = 'king';
+var cardsInPlay = [];
 
-//Add card divs to gameboard
-var gameBoard = document.getElementById('game-board');
-  for (var i = 0; i < 4; i++) {
-    var newCard = document.createElement('div');
-//    console.log(newCard);
-    newCard.className = 'card';
-    gameBoard.appendChild(newCard);
-  }
-
-//Function to create HTML for cards. Then, append to div with class board.
+//Function to create HTML for cards.
 var createBoard = function()  {
-  for (var i = 0; i < 4; i++) {
-    var cards = document.getElementsByClassName('card');
-    cards[i].innerHTML = '';
+  var gameBoard = document.getElementById('game-board');
+  var newCard = [];
+  for (var i = 0; i < cards.length; i++) {
+    newCard[i] = document.createElement('div');
+    newCard[i].className = 'card';
+    gameBoard.appendChild(newCard[i]);
+    newCard[i].setAttribute('data', cards[i]);
+    newCard[i].addEventListener('click', isTwoCards);
   }
 }
 
-
-
-
-
-
-//User clicks card. selected card
-
-/*if (cardTwo===cardFour) {
-  alert("You found a match!");
-}
+var isMatch = function(cardsInPlay) {
+  if (cardsInPlay[0] === cardsInPlay[1]) {
+    alert('You have a match!');
+  }
   else {
-    alert("Sorry, try again.");
+    alert('Sorry, not a match!')
+  }
 }
-*/
+
+var isTwoCards = function() {
+  cardsInPlay.push(this.getAttribute('data'));
+console.log(cardsInPlay);
+  if (cardsInPlay.length === 2) { //If user has clicked two cards, run test.
+    isMatch(cardsInPlay);
+    cardsInPlay = [];
+  }
+}
+
+createBoard();
