@@ -15,7 +15,7 @@ var createBoard = function()  {
     newCard[i] = document.createElement('div');
     newCard[i].className = 'card';
     gameBoard.appendChild(newCard[i]);
-    newCard[i].setAttribute('data', cards[i]);
+    newCard[i].setAttribute('data-card', cards[i]);
     newCard[i].addEventListener('click', isTwoCards);
   }
 }
@@ -30,7 +30,7 @@ var isMatch = function(cardsInPlay) {
 }
 
 var isTwoCards = function() {
-  cardsInPlay.push(this.getAttribute('data'));
+  cardsInPlay.push(this.getAttribute('data-card'));
 console.log(cardsInPlay);
   if (cardsInPlay.length === 2) { //If user has clicked two cards, run test.
     isMatch(cardsInPlay);
